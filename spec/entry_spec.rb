@@ -1,7 +1,7 @@
 require_relative '../models/entry'
 
 # #1
-Rspec.describe Entry do
+RSpec.describe Entry do
   # #2
   describe "attributes" do
     # #3
