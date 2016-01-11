@@ -1,11 +1,27 @@
 require_relative '../models/entry'
 
+<<<<<<< HEAD
 RSpec.describe Entry do
    describe "attributes" do
      it "should respond to name" do
        entry = Entry.new('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
        expect(entry).to respond_to(:name)
      end
+=======
+# #1
+RSpec.describe Entry do
+  # #2
+  describe "attributes" do
+    # #3
+    it "should respond to name" do
+      entry = Entry.new
+      # #4
+      expect(entry).to respond_to (:name)
+    end
+    it "should respond to phone number" do
+      entry = Entry.newexpect(entry).to respond_to (:phone_number)
+    end
+>>>>>>> 905b7cb3977cdee3203a8a136078b9cfe21962a9
 
      it "should respond to phone_number" do
        entry = Entry.new('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
