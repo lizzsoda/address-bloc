@@ -29,4 +29,11 @@ class AddressBook
     end
     @entries.insert(index, Entry.new(name, phone_number, email))
   end
+
+# Search AddressBook for a specific entry by name
+
+ def binary_search(name)
+   return nil
+ end
+
 end
