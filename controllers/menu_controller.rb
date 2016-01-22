@@ -100,6 +100,7 @@ require_relative '../models/address_book'
      end
    end
 
+<<<<<<< HEAD
    def sarch_submenu(entry)
      #12
      puts "\nd - delete entry"
@@ -125,6 +126,29 @@ require_relative '../models/address_book'
        system "clear"
        puts "#{selection} is not a valid input"
        search_submenu(entry)
+=======
+   def read_csv
+
+ # #1
+     print "Enter CSV file to import: "
+     file_name = gets.chomp
+
+ # #2
+     if file_name.empty?
+       system "clear"
+       puts "No CSV file read"
+       main_menu
+     end
+
+ # #3
+     begin
+       entry_count = @address_book.import_from_csv(file_name).count
+       system "clear"
+       puts "#{entry_count} new entries added from #{file_name}"
+     rescue
+       puts "#{file_name} is not a valid CSV file, please enter the name of a valid CSV file"
+       read_csv
+>>>>>>> 05a51b43ef374349842a1e84d34d44508ac2f5f7
      end
    end
 
