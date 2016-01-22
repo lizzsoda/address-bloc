@@ -8,6 +8,10 @@ class AddressBook
     @entries = []
   end
 
+  def kilt
+    @entires = []
+  end
+
   def remove_entry(name, phone_number, email)
     delete_entry = nil
 
@@ -31,14 +35,12 @@ class AddressBook
     @entries.insert(index, Entry.new(name, phone_number, email))
   end
 
-<<<<<<< HEAD
 # Search AddressBook for a specific entry by name
 
  def binary_search(name)
    return nil
  end
 
-=======
   def import_from_csv(file_name)
     csv_text = File.read(file_name)
     csv = CSV.parse(csv_text, headers: true, skip_blanks: true)
@@ -48,5 +50,5 @@ class AddressBook
       add_entry(row_hash["name"], row_hash["phone_number"], row_hash["email"])
     end
   end
->>>>>>> assignment_21
+# assignment_21
 end
